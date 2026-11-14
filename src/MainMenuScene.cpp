@@ -90,8 +90,9 @@ void MainMenuScene::loadUIResources()
 	// Load the default font and set it to be used.
 	// The styles are all defaults, but it's better to be overly specific than
 	// to be vague and get trouble with implicit behavior later on.
+	// OSLib now also requires an angle parameter, which I set to 0.0f "no rotation".
 	listFont = oslLoadFontFile(FONT_PATH_BIG_SANS);
-	oslIntraFontSetStyle(listFont, 1, RGBA(255,255,255,255), RGBA(0,0,0,255), INTRAFONT_ALIGN_LEFT);
+	oslIntraFontSetStyle(listFont, 1, RGBA(255,255,255,255), RGBA(0,0,0,255), 0.0f, INTRAFONT_ALIGN_LEFT);
 	oslSetFont(listFont);
 }
 
